@@ -63,3 +63,11 @@ print(P1.__sub__({5:1,3:1}))
 print(P1.__mul__(2))
 
 P2 = evv(4,{0 : 1, 1 : 3, 2 : 2, 3 : 1})
+
+print(P2.Getdegree())
+P2.setCoefficient(1,2)
+print(P2.Getcoefficient(1))
+print(P2.evaluate(2))
+print(P2.__add__({5:2,3:4}))
+print(P2.__sub__({5:1,3:1}))
+print(P2.__mul__(2))
