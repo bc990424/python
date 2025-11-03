@@ -28,3 +28,11 @@ P1.setCoefficient(1, 2)
 print(P1.Getcoefficient(1))
 print(P1.evaluate(2))
 
+P2 = evv(4,{0 : 1, 1 : 3, 2 : 2, 3 : 1})
+
+print(P2.Getdegree())
+P2.setCoefficient(1,2)
+print(P2.Getcoefficient(1))
+print(P2.evaluate(2))
+
+

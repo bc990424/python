@@ -43,6 +43,8 @@ class evv:
         return result
 
     def __mul__(self,c):
+        if type(c) != int and type(c) != float:
+            return "ERROR"
         result = self.P.copy()
         for i,n in self.P.items():
             result[i] = n * c
