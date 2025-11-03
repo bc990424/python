@@ -1,11 +1,22 @@
-?">:ㅋㅁㅋㄴㅇ려ㅐ-1ㅇㄹ
+class evv:
+    def __init__(self,n,P):
+        self.degree = n
+        self.P = P
 
-print(f(3))
-print(f(4.123124))
-print(f("3"))
-print(f(True)) #
-print(f((1,2,3,4)))
-print(f([1,"2",3]))
-#print(f({1,2,3})) 세트는 각 요소가 하나씩 포합되어서 곱하기가 안된다.
-#print(f({1:2,2:3,3:4})) 딕셔너리의 키 값은 중복되지 않는다.
+    def Getdegree(self):
+        return self.degree
 
+    def setCoefficient(self,i,v):
+        self.P[i] = v
+
+    def Getcoefficient(self,i):
+        return self.P[i]
+
+    def evaluate(self,x):
+        result,temp = 0, 0
+
+        for i in self.P:
+            result += i *(x ** temp)
+            temp += 1
+
+        return result
