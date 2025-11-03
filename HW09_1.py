@@ -22,17 +22,28 @@ class evv:
         return result
 
     def __add__(self,other):
+        result = {}
         for i,n in other.items():
             print(i,n)
             if i in self.P.keys():
-                self.P[i] += n
+                result[i] += n
             else :
-                self.P[i] = n
+                result[i] = n
     def __sub__(self,other):
-        pass
+        result = {}
+        for i,n in other.items():
+            print(i,n)
+            if i in self.P.keys():
+                result[i] -= n
+            else :
+                result[i] = n * -1
 
-    def __mul__(self,other):
-        pass
+    def __mul__(self,c):
+        result = {}
+        for i,n in self.P.items():
+            result[i] = n * c
+
+        return result
 
 
 
@@ -43,6 +54,6 @@ print(P1.Getdegree())
 P1.setCoefficient(1,2)
 print(P1.Getcoefficient(1))
 print(P1.evaluate(2))
-P1.__add__({1:2,3:4})
+P1.__add__({5:2,3:4})
 
 P2 = evv(4,{0 : 1, 1 : 3, 2 : 2, 3 : 1})
