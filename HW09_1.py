@@ -9,6 +9,8 @@ class evv:
     def setCoefficient(self,i,v):
         self.P[i] = v
 
+
+
     def Getcoefficient(self,i):
         return self.P[i]
 
@@ -33,7 +35,7 @@ class evv:
 
 
 
-P1 = evv(4,(3, 5, 0, 2))
+P1 = evv(4,{0 : 3, 1 : 5, 2 : 0, 3 : 2})
 
 print(P1.Getdegree())
 print(P1.setCoefficient(1,2))
