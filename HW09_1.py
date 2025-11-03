@@ -1,16 +1,57 @@
-a = float(input())
-b = float(input())
-c = float(input())
+class evv:
+    def __init__(self,n,P):
+        self.degree = n
+        self.P = P
 
-D = lambda x,y,z:y**2 -4*x*z
+    def Getdegree(self):
+        return self.degree
 
-find_x = lambda x,y,z:[(-b + D(x,y,z) ** 0.5) / 2 / a,(-b - D(x,y,z) ** 0.5) / 2 / a]
+    def setCoefficient(self,i,v):
+        self.P[i] = v
+
+    def Getcoefficient(self,i):
+        return self.P[i]
+
+    def evaluate(self,x):
+        result,temp = 0, 0
+
+        for i in self.P:
+            result += i *(x ** temp)
+            temp += 1
+
+        return result
+
+    def __add__(self,other):
+        pass
+
+    def __sub__(self,other):
+        pass
+
+    def __mul__(self,other):
+        pass
 
 
-result_D = D(a,b,c)
-result_find_x = find_x(a,b,c)
 
-if result_D < 0:
-    print("근이 없음")
-else:
-    print(result_find_x)
+
+P1 = evv(4,(3, 5, 0, 2))
+
+print(P1.Getdegree())
+print(P1.setCoefficient(1,2))
+print(P1.Getcoefficient(1))
+print(P1.evaluate(2))
+"""
+print(f"{degree(P1)}")
+print(f"{coefficient(P1, 1)}")
+print(f"{coefficient(P1, 2)}")
+print(f"{coefficient(P1, 4)}")
+print(f"{evaluate(P1, 1)}")
+print(f"{evaluate(P1, 2)}")
+
+P2 = (2, 1, -3)
+
+print(f"{degree(P2)}")
+print(f"{coefficient(P2, 2)}")
+print(f"{coefficient(P2, 3)}")
+print(f"{evaluate(P2, 2)}")
+
+"""
