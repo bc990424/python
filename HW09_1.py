@@ -9,8 +9,6 @@ class evv:
     def setCoefficient(self,i,v):
         self.P[i] = v
 
-
-
     def Getcoefficient(self,i):
         return self.P[i]
 
@@ -24,8 +22,12 @@ class evv:
         return result
 
     def __add__(self,other):
-        pass
-
+        for i,n in other.items():
+            print(i,n)
+            if i in self.P.keys():
+                self.P[i] += n
+            else :
+                self.P[i] = n
     def __sub__(self,other):
         pass
 
@@ -38,22 +40,9 @@ class evv:
 P1 = evv(4,{0 : 3, 1 : 5, 2 : 0, 3 : 2})
 
 print(P1.Getdegree())
-print(P1.setCoefficient(1,2))
+P1.setCoefficient(1,2)
 print(P1.Getcoefficient(1))
 print(P1.evaluate(2))
-"""
-print(f"{degree(P1)}")
-print(f"{coefficient(P1, 1)}")
-print(f"{coefficient(P1, 2)}")
-print(f"{coefficient(P1, 4)}")
-print(f"{evaluate(P1, 1)}")
-print(f"{evaluate(P1, 2)}")
+P1.__add__({1:2,3:4})
 
-P2 = (2, 1, -3)
-
-print(f"{degree(P2)}")
-print(f"{coefficient(P2, 2)}")
-print(f"{coefficient(P2, 3)}")
-print(f"{evaluate(P2, 2)}")
-
-"""
+P2 = evv(4,{0 : 1, 1 : 3, 2 : 2, 3 : 1})
