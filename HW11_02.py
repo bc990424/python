@@ -1,5 +1,5 @@
 import zipfile
-import sys
+
 file_name = input()
 
 if file_name.endswith(".zip"):
