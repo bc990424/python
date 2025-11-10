@@ -13,4 +13,4 @@ if file_name.endswith(".zip"):
 
 
 else:
-    print("zip을 끝나지 않음")
+    print("zip으로 끝나지 않음")
